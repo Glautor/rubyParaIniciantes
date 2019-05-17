@@ -19,7 +19,7 @@
         <expandable [expandHeight]="45" [expanded]="item.expanded">
           <ion-scroll scrollY="true" style="width: 100%; height: 40vh;">
             <div *ngFor="let line of item.lines; let i = index;" class="line">
-              <span class="line-index">{{i}}</span>
+              <span class="line-index">{{get_index(i+1)}}</span>
               <span [class]="line.type">{{line.text}}</span>
             </div>
           </ion-scroll>

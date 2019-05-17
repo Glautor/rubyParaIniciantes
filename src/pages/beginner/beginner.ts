@@ -82,4 +82,9 @@ export class BeginnerPage {
     });
   }
 
+  get_index(index){
+    let i = String(index)
+    return (i.length == 1 ? '0' + i : i);
+  }
+
 }

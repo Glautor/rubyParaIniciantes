@@ -12,10 +12,11 @@ expandable {
             }
             span.line-index{ 
                 margin-right: 5pt; 
-                color: #777;
+                width: 5vh;
+                color: map-get($colors, line-index-color);
             }
-            span.comment { color: #999; }
-            span.code { color: #00e676; }
+            span.comment { color: map-get($colors, comment-color); }
+            span.code { color: map-get($colors, code-color); }
         }
     }   
     .code-area{
