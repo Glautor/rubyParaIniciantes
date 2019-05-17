@@ -8,10 +8,9 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
-    // this.navCtrl.push('BeginnerPage');
   }
 
-  pushPage = function(page){
+  pushPage(page){
     this.navCtrl.push(page, {});
   }
 }
