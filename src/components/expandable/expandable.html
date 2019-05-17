@@ -1,3 +1,7 @@
 <div #expandWrapper class='expand-wrapper' [class.collapsed]="!expanded">
-  <ng-content></ng-content>
+  <div class="code-area">
+    <br>
+    <ng-content></ng-content>
+    <br>
+  </div>
 </div>

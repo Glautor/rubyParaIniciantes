@@ -12,15 +12,16 @@ export class BeginnerPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items = [
-        {expanded: false},
-        {expanded: false},
-        {expanded: false},
-        {expanded: false},
-        {expanded: false},
-        {expanded: false},
-        {expanded: false},
-        {expanded: false},
-        {expanded: false}
+      { title: 'Declaração de Variaveis', expanded: false, lines: [
+        {type: 'comment', text: '# Variáveis Locais'},
+        {type: 'code', text: 'nome = "Luíza"'},
+        {type: 'comment', text: '# Variáveis Global'},
+        {type: 'code', text: '$versao = 1.5'},
+        {type: 'comment', text: '# Variáveis de Instância'},
+        {type: 'code', text: '@idade = 19'},
+        {type: 'comment', text: '# Variáveis de Classe'},
+        {type: 'code', text: '@@cont = 28'},
+      ]},       
     ];
     console.log(this.items);
   }

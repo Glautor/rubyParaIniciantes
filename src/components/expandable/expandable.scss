@@ -1,9 +1,19 @@
 expandable {
- 
     .expand-wrapper {
         transition: 0.2s linear;
+        background-color: map-get($colors, code-background);
+        border-radius: 5pt;
+        margin-top: 0.5em;
+        span {
+            display: block;
+            line-height: 1.5;
+        }
+        span.comment { color: #999; }
+        span.code { color: white; }
     }   
- 
+    .code-area{
+        margin: 5%;
+    }
     .collapsed {
         height: 0 !important;
     }

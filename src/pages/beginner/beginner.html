@@ -8,13 +8,20 @@
 <ion-content padding>
  
   <ion-list>
-    <button detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
-      <h2>My Neighbor Totoro</h2>
-      <p>Hayao Miyazaki • 1988</p>
-      <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
-          Hello people
-      </expandable>
-      <button ion-button clear item-end>View</button>
-    </button>
+    <div detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+      <div class="item-header">
+        <span class="item-title">{{ item.title }}</span>
+        <button ion-button icon-only clear class="item-expand-button">
+          <ion-icon [name]="item.expanded ? 'arrow-dropdown' : 'arrow-dropleft' "></ion-icon>
+        </button>
+      </div>
+      <div class="item-body">
+        <expandable [expandHeight]="item.lines.length * 30" [expanded]="item.expanded">
+            <span *ngFor="let line of item.lines" [class]="line.type">
+              {{line.text}}
+            </span>
+        </expandable>
+      </div>
+    </div>
   </ion-list>
 </ion-content>
