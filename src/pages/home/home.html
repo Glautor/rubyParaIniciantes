@@ -6,9 +6,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+  <ion-card (click)="pushPage('BeginnerPage')">
+    <img src="https://fluxoconsultoria.poli.ufrj.br/wp-content/uploads/2016/05/photo-1529101091764-c3526daf38fe.jpg"/>
+    <div class="card-title">Iniciante</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>
+
+  <ion-card (click)="pushPage('IntermediatePage')">
+    <img src="https://fluxoconsultoria.poli.ufrj.br/wp-content/uploads/2016/05/photo-1529101091764-c3526daf38fe.jpg"/>
+    <div class="card-title">Intermediário</div>
+    <div class="card-subtitle">64 Listings</div>
+  </ion-card>
+
+  <ion-card (click)="pushPage('AdvancedPage')">
+    <img src="https://fluxoconsultoria.poli.ufrj.br/wp-content/uploads/2016/05/photo-1529101091764-c3526daf38fe.jpg"/>
+    <div class="card-title">Avançado</div>
+    <div class="card-subtitle">72 Listings</div>
+  </ion-card>
+
+  <ion-card (click)="pushPage('SeniorPage')">
+    <img src="https://fluxoconsultoria.poli.ufrj.br/wp-content/uploads/2016/05/photo-1529101091764-c3526daf38fe.jpg"/>
+    <div class="card-title">Sênior</div>
+    <div class="card-subtitle">28 Listings</div>
+  </ion-card>
 </ion-content>

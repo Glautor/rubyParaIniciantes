@@ -11,4 +11,7 @@ export class HomePage {
 
   }
 
+  pushPage = function(page){
+    this.navCtrl.push(page, {});
+  }
 }
