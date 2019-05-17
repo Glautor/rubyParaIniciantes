@@ -4,12 +4,19 @@ expandable {
         background-color: map-get($colors, code-background);
         border-radius: 5pt;
         margin-top: 0.5em;
-        span {
-            display: block;
+        div.line {
             line-height: 1.5;
+            span{
+                font-weight: bold;
+                height: 100%;
+            }
+            span.line-index{ 
+                margin-right: 5pt; 
+                color: #777;
+            }
+            span.comment { color: #999; }
+            span.code { color: #00e676; }
         }
-        span.comment { color: #999; }
-        span.code { color: white; }
     }   
     .code-area{
         margin: 5%;

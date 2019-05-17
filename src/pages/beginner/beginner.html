@@ -8,7 +8,7 @@
 <ion-content padding>
  
   <ion-list>
-    <div detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+    <div detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items" text-wrap>
       <div class="item-header">
         <span class="item-title">{{ item.title }}</span>
         <button ion-button icon-only clear class="item-expand-button">
@@ -17,9 +17,10 @@
       </div>
       <div class="item-body">
         <expandable [expandHeight]="item.lines.length * 30" [expanded]="item.expanded">
-            <span *ngFor="let line of item.lines" [class]="line.type">
-              {{line.text}}
-            </span>
+          <div *ngFor="let line of item.lines; let i = index;" class="line">
+            <span class="line-index">{{i}}</span>
+            <span [class]="line.type">{{line.text}}</span>
+          </div>
         </expandable>
       </div>
     </div>

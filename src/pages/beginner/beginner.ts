@@ -13,7 +13,7 @@ export class BeginnerPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items = [
       { title: 'Declaração de Variaveis', expanded: false, lines: [
-        {type: 'comment', text: '# Variáveis Locais'},
+        {type: 'comment', text: '# Variáveis Locais Variáveis Locais Variáveis Locais Variáveis Locais'},
         {type: 'code', text: 'nome = "Luíza"'},
         {type: 'comment', text: '# Variáveis Global'},
         {type: 'code', text: '$versao = 1.5'},
@@ -32,15 +32,12 @@ export class BeginnerPage {
 
   expandItem(item){
     this.items.map((listItem) => {
-
         if(item == listItem){
             listItem.expanded = !listItem.expanded;
         } else {
             listItem.expanded = false;
         }
-
         return listItem;
-
     });
   }
 
