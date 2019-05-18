@@ -126,7 +126,7 @@ export class IntermediatePage {
         {type: 'comment', text: '# Para evitar escrever os métodos acessores e modificadores para cada atributo da classe, usa-se o attr_accessor que faz isso para você.'},
         {type: 'comment', text: '# O mesmo código da classe Pessoa acima poderia ser (re)escrito para'},
         {type: 'code', text: 'class Pessoa'},
-        {type: 'code', text: 'attr_accessor :nome'},
+        {type: 'code', text: 'attr_accessor :nome', level: 1},
         {type: 'code', text: 'end'},
         {type: 'code', text: 'pessoa = Pessoa.new'},
         {type: 'code', text: 'pessoa.nome = "Joao"'},
@@ -136,10 +136,10 @@ export class IntermediatePage {
       { title: 'Herança  de Classes', expanded: false, lines: [
         {type: 'comment', text: '# Para criar uma classe que herda de outra, basta usar o operador << '},
         {type: 'code', text: 'class Pessoa'},
-        {type: 'code', text: 'attr_accessor :nome'},
+        {type: 'code', text: 'attr_accessor :nome', level: 1},
         {type: 'code', text: 'end'},
         {type: 'code', text: 'class Funcionario << Pessoa'},
-        {type: 'code', text: 'attr_accessor :salario'},
+        {type: 'code', text: 'attr_accessor :salario', level: 1},
         {type: 'code', text: 'def initialize', level: 1},
         {type: 'code', text: '@nome = "Joao"', level: 2},
         {type: 'code', text: '@salario = 1200', level: 2},
@@ -148,9 +148,9 @@ export class IntermediatePage {
         {type: 'code', text: 'end'},
         {type: 'code', text: 'funcionario = Funcionario.new'},
         {type: 'code', text: 'puts funcionario.nome'},
-        {type: 'code', text: '# => "Joao"'},
+        {type: 'comment', text: '# => "Joao"'},
         {type: 'code', text: 'puts funcionario.salario'},
-        {type: 'code', text: '# => 1200'},
+        {type: 'comment', text: '# => 1200'},
       ]},
     ];
   }
