@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { IntermediatePage } from './intermediate';
-import { ExpandableComponent } from '../../components/expandable/expandable';
+
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
     IntermediatePage,
-    ExpandableComponent
   ],
   imports: [
+    ComponentsModule,
     IonicPageModule.forChild(IntermediatePage),
   ],
-  entryComponents: [ExpandableComponent]
 })
 export class IntermediatePageModule {}

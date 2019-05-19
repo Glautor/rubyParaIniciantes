@@ -1,4 +1,5 @@
 page-beginner {
+    background-color: map-get($colors, secondary);
     .item-expand-button{
         align-items: baseline;
         float: right;
