@@ -154,6 +154,28 @@ export class BeginnerPage {
         {type: 'code', text: 'else', level: 1},
         {type: 'code', text: '"Número não encontrado"', level: 2},
         {type: 'code', text: 'end'}
+      ]},
+      { title: 'Strings', expanded: false, lines: [
+        {type: 'comment', text: '# Em Ruby podemos declarar Strings de diferentes formas, veja a seguir os exemplos'},
+        {type: 'comment', text: '# A seguir temos a forma mais usada para declarar Strings'},
+        {type: 'code', text: '"Essa é minha String"'},
+        {type: 'comment', text: '# Com esse formato, podemos concatenar duas Strings das seguintes formas'},
+        {type: 'code', text: '"Essa é minha " + "String"'},
+        {type: 'code', text: 'var = "String"'},
+        {type: 'code', text: '"Essa é minha #{var}"'},
+        {type: 'code', text: '"Essa é minha ".concat("String")'},
+        {type: 'comment', text: 'A mais elegante e eficaz forma de criar Strings é a Interpolação, que utiliza a notação #{}'},
+        {type: 'comment', text: 'Obs.: não é possível realizar a Interpolação quando estiver declarando String com aspas simples'}
+      ]},
+      { title: 'Símbolos', expanded: false, lines: [
+        {type: 'comment', text: '# Um símbolo é parecido com um nome de variável, mas é prefixado com :'},
+        {type: 'code', text: ':name'},
+        {type: 'comment', text: '# Não é necessário pré-declarálos e, o mais importante, eles são únicos, ou seja, um símbolo nunca deve ser alterado'},
+        {type: 'comment', text: '# Acaba sendo mais performático que uma String, pois, enquanto a String sempre que declarada irá alocar um novo espaço na memório, o símbolo sempre será o mesmo'},
+        {type: 'comment', text: '# Por essa razão, os hashs costumam usar referências em símbolos, pois tais referências não devem ser alteradas'},
+        {type: 'code', text: 'hash = {nome: "Novo Hash", versao: 1.2}'},
+        {type: 'code', text: 'hash[:nome]'},
+        {type: 'comment', text: '=> Novo Hash'}
       ]}
     ];
   }
@@ -182,5 +204,4 @@ export class BeginnerPage {
     let i = String(index)
     return (i.length == 1 ? '0' + i : i);
   }
-
 }
