@@ -26,11 +26,11 @@ export class MyApp {
 
   showBannerAd(){
     const bannerConfig: AdMobFreeBannerConfig = {
-      // id: 'ca-app-pub-2022053311233116/4425600754',
-      id: 'ca-app-pub-3940256099942544/6300978111', // Google test
+      id: 'ca-app-pub-2022053311233116/4425600754',
+      // id: 'ca-app-pub-3940256099942544/6300978111', // Google test
       // add your config here
       // for the sake of this example we will just use the test config
-      isTesting: false,
+      isTesting: true,
       autoShow: true
      };
      this.admobFree.banner.config(bannerConfig);
